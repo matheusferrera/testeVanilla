@@ -41,7 +41,7 @@
         
         <div class='div-titulo-apresentacao'>
             <h1>Centralizado</h1>
-            <div class="div-bg-estrelas" id="div-bg-estrelas">
+            <div class="div-bg-estrelas" id="div-bg-estrelas" style="background-color: red;">
                 <h1 style="color: white">div bg-sestrelas</h1>
             </div>
         </div>
@@ -63,30 +63,28 @@
         flagEstrelas = 0
 
         var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
-            svg.setAttributeNS(null,"width","100vw");
-            svg.setAttributeNS(null,"height","100vh");
+            svg.setAttributeNS(null,"width","100%");
+            svg.setAttributeNS(null,"height","100%");
             svg.setAttribute("class", "estrela");
-
+            
+            document.getElementById("div-bg-estrelas").appendChild(svg)
         function geraEstrelas() {
             flagEstrelas ++
 
-            if (flagEstrelas >300){
+            if (flagEstrelas >200){
                 return 0
             }
            
-            
             var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle")
             circle.setAttributeNS(null, "cx", Math.random()*98 + "%")
             circle.setAttributeNS(null, "cy", Math.random()*98 + "%")
             circle.setAttributeNS(null, "r", Math.random()*2)
             circle.setAttributeNS(null, "fill", "white")
             circle.style.opacity = 0
-
             circle.setAttribute("class", "circulo");
 
             svg.appendChild(circle)
-
-            document.getElementById("div-bg-estrelas").appendChild(svg)
+            
         }
 
         function brilhaEstrlas(){
@@ -101,8 +99,8 @@
             
         }
     
-        setInterval(geraEstrelas, 1);
-        setInterval(brilhaEstrlas, 3000);
+        setInterval(geraEstrelas, 200);
+        setInterval(brilhaEstrlas, 2000);
 
 
         let path = document.querySelector('path')
@@ -178,8 +176,8 @@
   
   .div-depoisFumaca .div-titulo-apresentacao{
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     left: 0;
     top: 0;
   }
