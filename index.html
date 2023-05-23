@@ -61,32 +61,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         flagEstrelas = 0
+
+        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
+            svg.setAttributeNS(null,"width","100vw");
+            svg.setAttributeNS(null,"height","100vh");
+            svg.setAttribute("class", "estrela");
+
         function geraEstrelas() {
             flagEstrelas ++
 
-            if (flagEstrelas >1000){
+            if (flagEstrelas >300){
                 return 0
             }
-            var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
-            svg.setAttributeNS(null,"width","10");
-            svg.setAttributeNS(null,"height","10");
+           
             
             var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle")
-            circle.setAttributeNS(null, "cx", "4")
-            circle.setAttributeNS(null, "cy", "4")
+            circle.setAttributeNS(null, "cx", Math.random()*98 + "%")
+            circle.setAttributeNS(null, "cy", Math.random()*98 + "%")
             circle.setAttributeNS(null, "r", Math.random()*2)
             circle.setAttributeNS(null, "fill", "white")
-            circle.style.transition = '2s'
-            
-            svg.style.left = (Math.random() * 100) + "%"
-            svg.style.top = (Math.random() * 100) + "%"
-            svg.style.position = 'absolute'
-            svg.style.display = 'block'
-            svg.style.transition = '2s'
-            svg.style.opacity = '0'
-            
-            svg.setAttribute("id", "estrela");
-            svg.setAttribute("class", "estrela");
+            circle.style.opacity = 0
+
             circle.setAttribute("class", "circulo");
 
             svg.appendChild(circle)
@@ -95,22 +90,19 @@
         }
 
         function brilhaEstrlas(){
-        
-            estrela = document.querySelectorAll('.estrela');
-            estrela.forEach(box => {
-            box.style.opacity = Math.random();
-            });
-
+    
             circulo = document.querySelectorAll('.circulo')
             circulo.forEach(circulo => {
                 valorAleatorio = Math.random()
                 circulo.style.opacity = valorAleatorio
-                circulo.style.scale = valorAleatorio * (1 - 0.9) + 0.9;
+                circulo.style.transition = '2s'
             })
+
+            
         }
     
-        setInterval(geraEstrelas, 50);
-        setInterval(brilhaEstrlas, 1000);
+        setInterval(geraEstrelas, 1);
+        setInterval(brilhaEstrlas, 3000);
 
 
         let path = document.querySelector('path')
