@@ -64,17 +64,17 @@
         function geraEstrelas() {
             flagEstrelas ++
 
-            if (flagEstrelas >10000){
+            if (flagEstrelas >1000){
                 return 0
             }
             var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
-            svg.setAttributeNS(null,"width","20");
-            svg.setAttributeNS(null,"height","20");
+            svg.setAttributeNS(null,"width","10");
+            svg.setAttributeNS(null,"height","10");
             
             var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle")
             circle.setAttributeNS(null, "cx", "4")
             circle.setAttributeNS(null, "cy", "4")
-            circle.setAttributeNS(null, "r", "2")
+            circle.setAttributeNS(null, "r", Math.random()*2)
             circle.setAttributeNS(null, "fill", "white")
             circle.style.transition = '2s'
             
@@ -111,6 +111,7 @@
     
         setInterval(geraEstrelas, 50);
         setInterval(brilhaEstrlas, 1000);
+
 
         let path = document.querySelector('path')
         let pathLenght = path.getTotalLength()
