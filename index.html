@@ -7,30 +7,29 @@
     <title>Document</title>
 
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+
+    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body style="background-color: rgb(12, 12, 12);">
     <div class="line-container">
         <svg width="82" height="789" viewBox="0 0 82 789" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M41.9999 0.5V55V118V167.5C41.9999 167.5 75.4998 215 41.9999 226.5C8.50006 238 12.5 276 40 280C80.1703 280.015 72.5 229.5 45 229C49.9562 234.704 50.0369 239 41.9999 240.5C42.9729 244.744 42.5082 246.666 37 248V255.5C43.6017 252.305 45.6215 252.84 48 255.5L51.5 263C56.7736 261.658 57.9711 262.273 58 265C53.3432 273.462 48.8898 274.062 40 273L39 268C39.2982 264.699 38.45 263.105 32 261.5L29.5 253C29.5 253 16.5 253 23 248C29.5 243 16.4999 206 9.99997 243C3.50001 280 65.9999 318 78.4999 243C85.2713 192.831 -9.87219 208.722 4 250C11.7737 273.509 9.60066 280.06 4 290C-1.86469 299.598 4.00002 322.5 14 319C24.0001 315.5 51.5 317.5 43.5 344C35.5001 370.5 59.8819 367.616 43.5 385C20.7704 385.317 -24.553 477.602 43.5 462C111.553 446.398 68.3315 554.653 43.5 570C23.8909 595.611 15.3558 610.677 43.5 650C81.0343 703.897 77.2561 734.138 43.5 788" stroke="#FF0000" stroke-width="2"/>
-         </svg>
-            
-            
-            
-            
+         </svg>   
     </div>
-    <svg width="2" height="2" viewBox="0 0 2 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0.858398" y="0.639038" width="1" height="1" rx="0.5" fill="white" fill-opacity="0.9"/>
-    </svg>
-    <svg height="100" width="100">
-        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
-      </svg>
+        
+    
+
+    <lottie-player id="firstLottie" src="https://assets7.lottiefiles.com/packages/lf20_y1qwfrd0.json" style="position: fixed; width:100vw; height: 100vh; scale: 7; z-index: 10; top: -70vh"  speed="1"></lottie-player>
     <section id="teste">
          <h1>Crie app's incriveis</h1>
          <a style="color:white; font-weight: 400; width: 50vw; display: flex; width: 90%;">Desenvolva seu site de maneira profissional, utilizando as melhores ferramentas e técnicas do mercado.</a>
          <p style="color:rgb(172, 172, 172); font-weight: 300; display: flex; width: 90%;">ideal para divulgação de produtos, portfólios ou institucionais.</p>
     </section>
 
-    <div class='div-depoisFumaca' id="div-depoisFumaca">
+    
+
+    <div class='div-depoisFumaca' id="div-depoisFumaca" style="transition: 1s">
         <svg class="clip-svg">
           <defs>
             <clipPath id="triangle-mask" clipPathUnits="objectBoundingBox" transform="scale(1 1)">
@@ -38,12 +37,27 @@
             </clipPath>
           </defs>
         </svg>  
-        
+
         <div class='div-titulo-apresentacao'>
-            <div class="div-bg-estrelas" id="div-bg-estrelas" style="background-color: black;">
-                <h1 style="color: white">div bg-sestrelas</h1>
-            </div>
-            
+            <div class="div-bg-estrelas" id="div-bg-estrelas" style="background-color: black;  border: solid 3px green">
+                <div style="width: 100%; height: 0px; position: relative; top:70%; border: 1px red solid; background-color: transparent;">
+                    <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_ydo1amjm.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+                </div>
+                <div id="div-bemVindo" style="width: 100%; height: 0px; position: relative; top:35%; border: 1px red solid; background-color: transparent; transition: 1s">
+                    <h1 style="color: white; text-align: center;">Bem vindo ao meu universo particular</h1>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+    <div id='div-servicos' style="background-color: black; position: fixed; height: 100%; width: 100%; top: 0; z-index: 3; opacity: 0; transition: 1s">
+        <div id="div-criaSite"style="width: 100%; height: 0px; position: relative; top:35%; border: 1px white solid; background-color: transparent; transition: 2s; opacity: 0">
+            <h1 style="color: white; text-align: center;">Criação de site</h1>
+        </div>
+
+        <div id="div-criaApp"style="width: 100%; height: 0px; position: relative; top:35%; border: 1px white solid; background-color: transparent; transition: 2s; opacity: 0">
+            <h1 style="color: white; text-align: center;">Criação de apps</h1>
         </div>
     </div>
 
@@ -52,10 +66,72 @@
         <a style="color:white; font-weight: 400;">Desenvolva seu site de maneira profissional, utilizando as melhores ferramentas e técnicas do mercado.</a>
         <p style="color:rgb(172, 172, 172); font-weight: 300;">ideal para divulgação de produtos, portfólios ou institucionais.</p>
     </section>
+
+    <section style="width: 50%">
+
+    </section>
+
     
-   
+    <section style="width: 50%">
+
+    </section>
+
+    
+    <section style="width: 50%">
+
+    </section>
+    
+    <section style="width: 50%">
+
+    </section>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+
+        function sectionSite(){
+            const scrollY = window.scrollY;
+          const scrollVh = window.scrollY/window.innerHeight;
+        
+    
+          if(scrollVh < 1.66){
+            document.getElementById('firstLottie').stop();
+            document.getElementById('div-depoisFumaca').style.opacity = 1;
+            
+            document.getElementById('div-servicos').style.opacity = 0;
+          }
+        
+         if(scrollVh > 1.66){
+            document.getElementById('firstLottie').play();
+            setTimeout(() => {
+                document.getElementById('div-depoisFumaca').style.opacity = 0;
+                document.getElementById('div-servicos').style.opacity = 1;
+            }, 1500);
+            
+         }
+
+          if(scrollVh < 3 && scrollVh > 1.66){
+            console.log("div criapp")
+            document.getElementById('div-criaSite').style.opacity = 0;
+            document.getElementById('div-criaApp').style.opacity = 1;
+            
+           
+          }
+
+          if(scrollVh > 3){
+            document.getElementById('div-criaApp').style.opacity = 0;
+            document.getElementById('div-criaSite').style.opacity = 1;
+          }
+
+
+          console.log(scrollY + "vh -> " + scrollVh)
+        }
+
+        setInterval(sectionSite, 10);
+
+    </script>
+
+    <!-- script das estrelas -->
     <script>
         flagEstrelas = 0
 
@@ -63,12 +139,12 @@
             svg.setAttributeNS(null,"width","100%");
             svg.setAttributeNS(null,"height","100%");
             svg.setAttribute("class", "estrela");
-            
+            svg.style.border = '2px solid white'
             document.getElementById("div-bg-estrelas").appendChild(svg)
         function geraEstrelas() {
             flagEstrelas ++
 
-            if (flagEstrelas >200){
+            if (flagEstrelas >300){
                 return 0
             }
            
@@ -96,8 +172,8 @@
             
         }
     
-        setInterval(geraEstrelas, 200);
-        setInterval(brilhaEstrlas, 2000);
+        setInterval(geraEstrelas, 100);
+        setInterval(brilhaEstrlas, 1000);
 
 
         let path = document.querySelector('path')
@@ -111,22 +187,12 @@
           const scrollY = window.scrollY;
           const scrollYTotal = window.pageYOffset;
 
-        //   gsap.to("#div-depoisFumaca", { 
-        //     width: scrollY/10+"vw",
-        //     height: scrollY/10+"vh",
-        //     left: (100-scrollY/10)/2+"vw",
-        //     duration: 2,
-        //     ease: "bounce.out" 
-        // });
-
-
-          document.getElementById("div-depoisFumaca").style.width = scrollY/10+"vw"
-          document.getElementById("div-depoisFumaca").style.height = scrollY/10+"vh"
-          document.getElementById("div-depoisFumaca").style.left = (100-scrollY/10)/2+"vw"
+          document.getElementById("div-depoisFumaca").style.width = scrollY/5+"vw"
+          document.getElementById("div-depoisFumaca").style.height = scrollY/5+"vh"
+          document.getElementById("div-depoisFumaca").style.left = (100-scrollY/5)/2+"vw"
          
 
           var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight)  
-          console.log(scrollPercentage)
             
         //   if(scrollPercentage > 0.1)
         //   {
@@ -154,7 +220,7 @@
 }
     
     .div-bg-estrelas{
-        position: absolute;
+    position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
